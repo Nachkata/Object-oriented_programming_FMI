@@ -26,6 +26,9 @@ void NormalCollection::remove(int n) {
 		data[i] = data[i + 1];
 	}
 	size--;
+	if (size * 4 <= capacity) {
+		resize(capacity / 2);
+	}
 }
 
 size_t NormalCollection::count(int n) const {
