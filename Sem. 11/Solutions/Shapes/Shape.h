@@ -28,9 +28,9 @@ private:
 public:
 	Shape(size_t pointsCount);
 	Shape(const Shape& other);
-	Shape(Shape&& other);
+	Shape(Shape&& other) noexcept;
 	Shape& operator=(const Shape& other);
-	Shape& operator=(Shape&& other);
+	Shape& operator=(Shape&& other) noexcept;
 	virtual ~Shape();
 
 	void setPoint(size_t pointIndex, int x, int y);
